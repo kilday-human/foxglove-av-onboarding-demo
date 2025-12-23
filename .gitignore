@@ -1,0 +1,8 @@
+venv/
+*.mcap
+*.pyc
+__pycache__/
+sample-data/*.bin
+sample-data/*.png
+sample-data/*.txt
+.DS_Store
