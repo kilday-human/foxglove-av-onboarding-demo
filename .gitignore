@@ -6,3 +6,10 @@ sample-data/*.bin
 sample-data/*.png
 sample-data/*.txt
 .DS_Store
+
+# KITTI raw data (too large for git)
+sample-data/kitti/
+*.mcap
+
+# But keep the directory structure
+!sample-data/kitti/.gitkeep
