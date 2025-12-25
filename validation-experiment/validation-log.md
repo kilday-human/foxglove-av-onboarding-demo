@@ -94,7 +94,12 @@
 - File loaded successfully ✓
 - Topic visible: `/example` (foxglove.PoseInFrame) ✓
 - Data structure correct: timestamp, frame_id, pose (position + orientation) ✓
-- 3D panel displays (empty grid, no geometry - expected for Pose data) ✓
+- 3D visualization: Shows frame label ("ego"), position as red dot, coordinate axes ✓
+
+**Important distinction:**
+- Adrian's example = Abstract telemetry (position markers, frame labels)
+- KITTI data = Rich visual sensors (camera images, LiDAR point clouds with thousands of 3D points)
+- Gap: Lightweight metadata vs. heavyweight sensor data requiring different conversion approach
 
 **What this proves:** Adrian's example works end-to-end for Pose data.
 
