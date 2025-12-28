@@ -27,7 +27,7 @@
 11. Line width = 0 to remove yellow lines
 
 ## Comparison
-**Brr:** 0 min → perfect demo
+**Browser:** 0 min → perfect demo
 **Downloaded:** 4+ hours → same result
 
 ## Key Missing Documentation
