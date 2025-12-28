@@ -9,23 +9,24 @@ Through iterative development informed by manual validation, we demonstrated AI 
 
 ## Results
 - **Generic AI (no training):** 70% accuracy - wrong topic names, incorrect defaults
-- **Trained AI (with validation data):** Better accuracy on topics/settings, but required manual refinement for production use
-- **Time savings:** 4 hours manual → ~30 minutes AI-assisted (when it works)
+- **Trained AI (with validation data):** 70-80% automation - correct topics/settings but needs structural refinement
+- **Time savings:** 4 hours manual → ~1 hour AI-assisted
+- **Reality:** AI gets you most of the way, human expertise finishes it
 
 ## Honest Assessment
 AI accelerates but doesn't replace expertise. It's a tool, not a solution.
 
-## Wt Worked
-- Keyword detection for dataset type
-- Topic name generation from validated examples
-- Frame configuration suggestions
-- Point cloud settings optimization
+## What AI Got Right
+- Dataset type detection (KITTI-360)
+- Topic name generation from validated examples (/camera_00_semantic/image, /velodyne_pointcloud)
+- Frame configuration (Fixed: map, Display: velodyne_frame)
+- Point cloud settings (size, color mode, field)
 
-## What Still Needs Human Expertise
-- Dataset-specific tuning
-- Error troubleshooting
-- Layout polish
-- Domain knowledge validation
+## What Still Needed Human Work
+- JSON structure formatting (tabs array, nested layout)
+- Testing and validation
+- Error debugging when imports failed
+- Final polish and refinement
 
-## Business Insight
-This proves the pattern for Foxglove: collect expert configurations once, use AI to scale them to new users. Human-in-the-loop, not full automation.
+## The Value
+Not full automation - but 4 hours → 1 hour is still meaningful acceleration. Shows the pattern: expert knowledge once, AI scales it to reduce friction.

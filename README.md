@@ -1,45 +1,43 @@
 # Foxglove AV Customer Onboarding Demo
 
-KITTI dataset to Foxglove MCAP conversion pipeline + AI-powered configuration assistant.
+KITTI dataset to Foxglove MCAP conversion pipeline + AI-assisted configuration tool.
 
 ## What This Demonstrates
 
 1. **Data Pipeline** - End-to-end KITTI → MCAP conversion with proper TF transforms
-2. **Onboarding Gap Validation** - 4-hour manual config documented vs 5-minute AI-guided
-3. **AI POC** - Layout generator achieving 95% automation (topic detection, frame settings, point cloud config)
+2. **Onboarding Gap Validation** - 4-hour manual config documented vs AI-assisted approach
+3. **AI POC** - Configuration generator showing 70-80% automation potential
 
 ## Completed
+
 ✅ Working KITTI → MCAP converter  
 ✅ 4-hour validation experiment (documented friction)  
-✅ AI-powered configuration generator (95% accuracy)  
+✅ AI-assisted configuration generator (70-80% automation, needs refinement)  
 ✅ Interview presentation with embedded videos
-
-## Interview Evidence Package
-
-- **Manual Validation**: 4-hour KITTI-360 configuration timeline with screenshots
-- **Student Conversation**: UCF robotics student feedback (redacted)
-- **Before/After**: Browser demo (0 min) vs downloaded MCAP (4 hours)
-- **AI Acceleration**: Generic (70%) → Validated data (95%)
-
-## Key Insight
-
-Foxglove's examples showcase capabilities but lack conversion onboarding. This gap particularly affects academic users learning on datasets like KITTI. AI-powered assistance can bridge this gap by automating expert configuration knowledge.
 
 ## Key Files
 
 - `data-pipeline/` - KITTI → MCAP converter
 - `validation-experiment/` - Screenshots, friction docs, AI POC results
-- `foxglove-ai-assistant.jsx` - React component for AI-guided config
-- `test-layout-v5.json` - Working AI-generated layout
+- `foxglove-ai-assistant.jsx` - React component for AI-assisted config
+- `foxglove-interview-demo.html` - Complete presentation
 
 ## Quick Start
+
 ```bash
 # Run converter
 cd data-pipeline && python kitti_to_mcap.py
 
 # Open in Foxglove
-# Import test-layout-v5.json for instant visualization
+# Use generated layouts for visualization
 ```
 
+## The Gap
+
+Foxglove's browser demos showcase perfect visualization instantly. But downloading the same data locally requires expert configuration knowledge that isn't documented. This gap particularly affects academic users learning on datasets like KITTI.
+
+**Evidence:** 4-hour configuration timeline, student feedback, systematic friction documentation.
+
 ---
+
 Built for Foxglove Customer Success Engineer interview.

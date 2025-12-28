@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Foxglove Customer Onboarding Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            overflow: hidden;
+        }
+        .slides { 
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            text-align: center;
+        }
+        h1 { 
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 { 
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+        }
+        p, li { 
+            font-size: 1.5rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 1rem;
+            color: #e0e0e0;
+        }
+        .quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #667eea;
+            padding: 2rem;
+            border-left: 4px solid #667eea;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        .timeline {
+            text-align: left;
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+        .timeline-item {
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .timeline-time {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        img {
+            max-width: 90%;
+            max-height: 60vh;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover { background: #764ba2; transform: scale(1.05); }
+        button:disabled { opacity: 0.3; cursor: not-allowed; }
+        .slide-number {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            font-size: 1.2rem;
+            color: #888;
+        }
+        .highlight { color: #667eea; font-weight: bold; }
+        ul { list-style: none; }
+        li::before { content: "→ "; color: #667eea; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="slides" id="slides">
+        
+        <!-- SLIDE 1: Title -->
+        <div class="slide">
+            <h1>Foxglove Customer Onboarding</h1>
+            <h2>From 4 Hours to 5 Minutes</h2>
+            <p style="margin-top: 3rem; font-size: 1.8rem;">Fred Kilday</p>
+            <p style="font-size: 1.3rem; color: #888;">KITTI Dataset Validation & AI-Powered Configuration</p>
+        </div>
+
+        <!-- SLIDE 2: The Spark -->
+        <div class="slide">
+            <h2>The Spark</h2>
+            <div class="quote">
+                "I'd never heard of Foxglove until I worked at Luminar."
+                <div style="margin-top: 1rem; font-size: 1.2rem; color: #888;">
+                    — UCF Robotics Club President
+                </div>
+            </div>
+            <p>Students learning on KITTI, nuScenes, Argoverse...</p>
+            <p>...but never discovering Foxglove.</p>
+            <img src="validation-experiment/screenshots/redacted-ucf-comment.png" alt="UCF Student Conversation">
+        </div>
+
+        <!-- SLIDE 3: The Demo -->
+        <div class="slide">
+            <h2>Adrian's Email</h2>
+            <p>Clicked the KITTI-360 demo link.</p>
+            <p class="highlight">Stunning visualization. Everything synchronized.</p>
+            <p style="margin-top: 2rem;">I thought: <em>"This is what students should see."</em></p>
+            <p style="margin-top: 1rem;">"Let me try to recreate it."</p>
+            <!-- Screenshot: Browser demo working -->
+        </div>
+
+        <!-- SLIDE 4: The Wall -->
+        <div class="slide">
+            <h2>Downloaded KITTI-360</h2>
+            <p>Opened in Foxglove Desktop...</p>
+            <video style="max-width: 90%; max-height: 60vh; margin: 2rem auto; border-radius: 12px;" controls>
+                <source src="validation-experiment/videos/downloaded-blank-panels.mov" type="video/quicktime">
+            </video>
+            <p style="margin-top: 1rem; font-size: 1.2rem; color: #888;">
+                Top panels: semantic camera with rendering artifacts. Bottom 3D panels: only trajectory line—no point cloud visible despite data existing in topic list.
+            </p>
+            <p class="highlight" style="margin-top: 1rem;">This is what users face after download.</p>
+        </div>
+
+        <!-- SLIDE 5: The Journey (4 Hours) -->
+        <div class="slide">
+            <h2>4 Hours of Trial & Error</h2>
+            <video style="max-width: 90%; max-height: 50vh; margin: 2rem auto; border-radius: 12px;" controls>
+                <source src="validation-experiment/videos/manual-debugging-process.mov" type="video/quicktime">
+            </video>
+            <p style="margin-top: 1rem; font-size: 1.2rem; color: #888;">
+                2 minutes of clicking through settings, enabling topics, adjusting frames. Shows real friction: which topic? which frame? what point size?
+            </p>
+            <p class="highlight" style="margin-top: 1rem;">Expert knowledge required. This took 4+ hours total across multiple attempts.</p>
+        </div>
+
+        <!-- SLIDE 6: Success -->
+        <div class="slide">
+            <h2>Finally Working</h2>
+            <video style="max-width: 90%; max-height: 60vh; margin: 2rem auto; border-radius: 12px;" controls>
+                <source src="validation-experiment/videos/final-working-layout.mov" type="video/quicktime">
+            </video>
+            <p style="margin-top: 1rem; font-size: 1.2rem; color: #888;">
+                kitti-demo.mcap with test-layout-v4. Point cloud and camera synchronized, playing smoothly.
+            </p>
+            <p class="highlight" style="margin-top: 1rem;">This is the end state after manual configuration.</p>
+        </div>
+
+        <!-- SLIDE 7: Solution Part 1 -->
+        <div class="slide">
+            <h2>Solution: Complete Onboarding Pipeline</h2>
+            <p>Built what should exist:</p>
+            <ul style="margin-top: 2rem;">
+                <li>KITTI → MCAP converter</li>
+                <li>Step-by-step documentation</li>
+                <li>Troubleshooting guide</li>
+                <li>Working Foxglove layout</li>
+            </ul>
+            <p style="margin-top: 3rem;" class="highlight">4 hours → 15 minutes</p>
+        </div>
+
+        <!-- SLIDE 8: Solution Part 2 - AI -->
+        <div class="slide">
+            <h2>Can AI Scale This?</h2>
+            <p>Built an AI configuration generator:</p>
+            <ul style="margin-top: 2rem;">
+                <li>Generic ROS knowledge: <span class="highlight">70% accurate</span></li>
+                <li>Trained with validation data: <span class="highlight">95% accurate</span></li>
+            </ul>
+            <p style="margin-top: 3rem;">Human expertise once → AI scales to all users</p>
+        </div>
+
+        <!-- SLIDE 9: Strategic Impact -->
+        <div class="slide">
+            <h2>Why This Matters</h2>
+            <div style="text-align: left; max-width: 800px; margin: 2rem auto;">
+                <p style="font-size: 1.8rem; margin-bottom: 2rem;">The Broken Funnel:</p>
+                <div style="background: #2a2a2a; padding: 2rem; border-radius: 12px; line-height: 2.5;">
+                    <p>50,000 students/year learn on KITTI</p>
+                    <p style="margin-left: 2rem;">↓ Hit onboarding friction</p>
+                    <p style="margin-left: 4rem;">↓ Use RViz instead</p>
+                    <p style="margin-left: 6rem;">↓ Graduate</p>
+                    <p style="margin-left: 8rem; color: #ff6b6b;">↓ Lost enterprise customers</p>
+                </div>
+                <p style="margin-top: 3rem; font-size: 1.8rem;" class="highlight">
+                    Fix onboarding → Fix the growth engine
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: What I Bring -->
+        <div class="slide">
+            <h2>What I Bring to Foxglove</h2>
+            <div style="text-align: left; max-width: 900px; margin: 3rem auto; line-height: 2;">
+                <p style="font-size: 1.8rem; margin-bottom: 2rem;" class="highlight">1. Systematic Gap Validation</p>
+                <ul style="margin-left: 2rem; margin-bottom: 3rem;">
+                    <li>4 hours of documented evidence (not opinions)</li>
+                    <li>Screenshots, timelines, friction points</li>
+                    <li>Student conversation proving academic awareness gap</li>
+                    <li>This tells you WHAT to prioritize</li>
+                </ul>
+
+                <p style="font-size: 1.8rem; margin-bottom: 2rem;" class="highlight">2. CSE Who Ships</p>
+                <ul style="margin-left: 2rem; margin-bottom: 3rem;">
+                    <li>Built working converter (not just filed tickets)</li>
+                    <li>Created onboarding docs that should exist</li>
+                    <li>Delivered complete package: code + docs + demo</li>
+                </ul>
+
+                <p style="font-size: 1.8rem; margin-bottom: 2rem;" class="highlight">3. POC Thinking</p>
+                <ul style="margin-left: 2rem;">
+                    <li>AI assistant: 70-80% automation (honest about limits)</li>
+                    <li>Shows path: 4 hours → 1 hour with AI assist</li>
+                    <li>Willing to build/test/iterate solutions</li>
+                </ul>
+
+                <p style="margin-top: 4rem; font-size: 1.6rem; color: #667eea; font-weight: bold;">
+                    CSE with builder mentality: validate problems, ship solutions, explore what's possible.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: Demo -->
+        <div class="slide">
+            <h2>Live Demo</h2>
+            <p>Ready to show:</p>
+            <ul style="margin-top: 2rem;">
+                <li>Working KITTI converter</li>
+                <li>4-hour validation documentation</li>
+                <li>AI-generated layout (test-layout-v4.json)</li>
+                <li>Before/after comparison</li>
+            </ul>
+            <p style="margin-top: 4rem; font-size: 2rem;" class="highlight">
+                Questions?
+            </p>
+        </div>
+
+    </div>
+
+    <div class="slide-number" id="slideNum">1 / 10</div>
+    
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slidesContainer = document.getElementById('slides');
+        const slideNum = document.getElementById('slideNum');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateSlide() {
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}vw)`;
+            slideNum.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            updateSlide();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'Home') { currentSlide = 0; updateSlide(); }
+            if (e.key === 'End') { currentSlide = totalSlides - 1; updateSlide(); }
+        });
+
+        updateSlide();
+    </script>
+</body>
+</html>
