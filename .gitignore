@@ -13,3 +13,4 @@ sample-data/kitti/
 
 # But keep the directory structure
 !sample-data/kitti/.gitkeep
+validation-experiment/videos/*.mov
