@@ -1,0 +1,43 @@
+{
+  "configById": {
+    "3D!1": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 75,
+        "phi": 80,
+        "thetaOffset": 0,
+        "targetOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      "followMode": "follow-pose",
+      "topics": {
+        "/velodyne_points": {
+          "visible": true,
+          "pointSize": 4
+        }
+      },
+      "layers": {
+        "grid": {
+          "visible": true
+        }
+      }
+    },
+    "Image!1": {
+      "imageTopic": "/camera/image_raw"
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "row",
+    "first": "3D!1",
+    "second": "Image!1",
+    "splitPercentage": 60
+  }
+}
