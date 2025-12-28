@@ -8,11 +8,11 @@ KITTI dataset to Foxglove MCAP conversion pipeline + AI-powered configuration as
 2. **Onboarding Gap Validation** - 4-hour manual config documented vs 5-minute AI-guided
 3. **AI POC** - Layout generator achieving 95% automation (topic detection, frame settings, point cloud config)
 
-## Status
-
-- ✅ Phase 1: Working converter (151MB demo, 216 messages)
-- ✅ Phase 1.5: Validation experiment (4-hour friction documented)
-- ✅ AI POC: Layout generator achieving 95% automation
+## Completed
+✅ Working KITTI → MCAP converter  
+✅ 4-hour validation experiment (documented friction)  
+✅ AI-powered configuration generator (95% accuracy)  
+✅ Interview presentation with embedded videos
 
 ## Interview Evidence Package
 
