@@ -34,10 +34,10 @@ cd data-pipeline && python kitti_to_mcap.py
 
 ## The Gap
 
-Foxglove's browser demos showcase perfect visualization instantly. But downloading the same data locally requires expert configuration knowledge that isn't documented. This gap particularly affects academic users learning on datasets like KITTI.
+Foxglove's browser demos showcase perfect visualization instantly. However, there is no documented, end‑to‑end path for taking the raw KITTI/KITTI‑360 datasets and reproducing those visualizations locally in MCAP and Foxglove; users must supply their own converters, topic mapping, and layout configuration. This undocumented gap is especially painful for academic users who primarily work from public datasets rather than ROS/MCAP‑native stacks. This gap particularly affects academic users learning on datasets like KITTI.
 
 **Evidence:** 4-hour configuration timeline, student feedback, systematic friction documentation.
 
 ---
 
-Built for Foxglove Customer Success Engineer interview.
+Project originally developed for a Foxglove Customer Success Engineer interview, now generalized as an AV onboarding demo.
