@@ -22,6 +22,18 @@ KITTI dataset to Foxglove MCAP conversion pipeline + AI-assisted configuration t
 - `foxglove-ai-assistant.jsx` - React component for AI-assisted config
 - `foxglove-interview-demo.html` - Complete presentation
 
+## Demo Videos
+
+**Small videos (in repo):**
+- [downloaded-blank-panels.mov](validation-experiment/videos/downloaded-blank-panels.mov) - Initial blank state
+- [browser-demo-working.mov](validation-experiment/videos/browser-demo-working.mov) - Browser demo working
+
+**Large videos (Google Drive):**
+- [ai-assistant-demo.mov](https://drive.google.com/file/d/1PezSesfzreLpNgu1fB4ogSHwF697EdDf/view?usp=sharing) - AI assistant generating layout
+- [final-working-layout.mov](https://drive.google.com/file/d/1VDRmAWjhKkitGa9fBNwI8GEtzyrnmxN1/view?usp=sharing) - Final working visualization
+- [github-repo-walkthrough.mov](https://drive.google.com/file/d/1cysfLmDn-24n69lCmrAMi4mWrQuh5pLL/view?usp=sharing) - Repository walkthrough
+- [manual-debugging-process.mov](https://drive.google.com/file/d/1tLUtEbdHld5BxDEL-SYGxta9iIDFhYD5/view?usp=sharing) - 4-hour debugging session
+
 ## Quick Start
 
 ```bash
