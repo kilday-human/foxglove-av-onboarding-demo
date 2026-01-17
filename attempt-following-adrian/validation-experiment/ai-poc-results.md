@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Through iterative development informed by manual validation, we achieved **95% accuracy** in automated Foxglove configuration generation. The key insight: **AI reasoning combined with human-validated ground truth creates reliable automation.**
+Through iterative development informed by manual validation, I achieved **95% accuracy** in automated Foxglove configuration generation. The key insight: **AI reasoning combined with human-validated ground truth creates reliable automation.**
 
 ---
 
