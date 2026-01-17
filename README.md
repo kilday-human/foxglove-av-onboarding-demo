@@ -19,6 +19,7 @@ KITTI dataset to Foxglove MCAP conversion pipeline + AI-assisted configuration t
 
 - `data-pipeline/` - KITTI → MCAP converter
 - `validation-experiment/` - Screenshots, friction docs, AI POC results
+- `attempt-following-adrian/` - Adrian's validation experiment with test scripts
 - `foxglove-ai-assistant.jsx` - React component for AI-assisted config
 - `foxglove-interview-demo.html` - Complete presentation
 
