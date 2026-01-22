@@ -14,3 +14,9 @@ sample-data/kitti/
 # But keep the directory structure
 !sample-data/kitti/.gitkeep
 validation-experiment/videos/*.mov
+
+# Personal presentation notes (keep local only)
+presentation-narrative-script.md
+*narrative*.md
+foxglove-interview-demo-revised.html
+Foxglove demo prep, troubleshooting.rtf
