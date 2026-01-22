@@ -14,6 +14,11 @@ Testing the Foxglove AI Assistant (FLAID) against real robotics datasets to meas
 - **Accuracy:** 100% on critical topics
 - **Status:** First-pass test with real topic list
 
+### ✅ UZH-FPV Drone Racing (High-Speed VIO)
+- **File:** `drone-results.md`
+- **Accuracy:** 100% on critical topics (3/3 sensors that exist)
+- **Status:** Zero manual tweaks needed - best performance yet!
+
 ## Running Tests
 
 ### Quick Test (Hilti)
@@ -58,13 +63,15 @@ rosbag info your-dataset.bag
 
 ## Test Results Summary
 
-| Dataset | Critical Topics | Accuracy | Time Manual | Time FLAID | Savings |
-|---------|----------------|----------|-------------|------------|---------|
-| KITTI-360 | 4 | 95% | 4 hours | 5 min | 99% |
-| Hilti SLAM | 3 | 100% | 2 hours | 5 min | 96% |
+| Dataset | Topics | Critical | Accuracy | Time Manual | Time FLAID | Savings | Status |
+|---------|--------|----------|----------|-------------|------------|---------|--------|
+| KITTI-360 | 4 | 4/4 | 95% | 4 hours | 5 min | 99% | ✅ |
+| Hilti SLAM | 11 | 3/3 | 100% | 2 hours | 5 min | 96% | ✅ |
+| UZH-FPV Drone | 11 | 3/3 | 100% | 1-2 hours | 5 min | 95% | ✅ |
 
-**Average Time Savings:** 97.5%  
-**Average Accuracy:** 97.5%
+**Average Time Savings:** 96.7%  
+**Average Accuracy:** 98.3%  
+**Zero-Tweak Success Rate:** 33% (1/3 datasets needed no manual adjustments)
 
 ## Files
 
