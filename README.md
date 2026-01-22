@@ -71,4 +71,4 @@ See `validation-experiment/README.md` for complete test results and methodology.
 
 ---
 
-Project originally developed for a Foxglove Customer Success Engineer interview, now generalized as an AV onboarding demo.
+Project originally developed for a Foxglove Solutions Engineer interview, now generalized as an AV onboarding demo.
