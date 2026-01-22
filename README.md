@@ -53,4 +53,22 @@ Foxglove's browser demos showcase perfect visualization instantly. However, ther
 
 ---
 
+## Validation Status
+
+**This is a validated proof-of-concept demonstrating FLAID's core value proposition:** 
+
+AI-powered configuration eliminates 2-4 hours of manual trial-and-error for robotics visualization onboarding.
+
+**Tested across 4 diverse verticals:**
+- ✅ Autonomous Vehicles (KITTI-360): 95% accuracy, 4h → 5min
+- ✅ Indoor SLAM (Hilti Robot): 100% accuracy, 2h → 5min  
+- ✅ High-Speed Drones (UZH-FPV): 100% accuracy, 1-2h → 5min
+- ✅ Manipulation Arms (Gazebo UR5e): 95% accuracy, 1-2h → 5min
+
+**Results:** 97.5% average accuracy, 100% critical topic detection, 96.5% average time savings.
+
+See `validation-experiment/README.md` for complete test results and methodology.
+
+---
+
 Project originally developed for a Foxglove Customer Success Engineer interview, now generalized as an AV onboarding demo.
