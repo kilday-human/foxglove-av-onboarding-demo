@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Loader2, Sparkles, Clock, Zap, AlertCircle, Copy, Check } from 'lucide-react';
+import { Loader2, Sparkles, Clock, Zap, AlertCircle, Copy, Check, Download } from 'lucide-react';
 
 const FoxgloveAIAssistant = () => {
   const [datasetInput, setDatasetInput] = useState('');
@@ -172,6 +172,26 @@ const FoxgloveAIAssistant = () => {
     }
   };
 
+  const downloadFoxgloveLayout = () => {
+    if (!result) return;
+    
+    const json = generateFoxgloveLayout();
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    
+    // Create clean filename from dataset type
+    const datasetSlug = result.datasetType
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+    a.download = `foxglove-layout-${datasetSlug}.json`;
+    
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-4">
       <div className="max-w-4xl mx-auto">
@@ -280,11 +300,17 @@ const FoxgloveAIAssistant = () => {
 
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h3 className="font-semibold text-slate-900">📦 Layout JSON (select all & copy)</h3>
-                <button onClick={selectJson} className="flex items-center gap-1 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded">
-                  {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                  {copied ? 'Selected!' : 'Select All'}
-                </button>
+                <h3 className="font-semibold text-slate-900">📦 Layout JSON</h3>
+                <div className="flex items-center gap-2">
+                  <button onClick={selectJson} className="flex items-center gap-1 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded">
+                    {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {copied ? 'Selected!' : 'Select All'}
+                  </button>
+                  <button onClick={downloadFoxgloveLayout} className="flex items-center gap-1 px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded">
+                    <Download className="w-4 h-4" />
+                    Download JSON
+                  </button>
+                </div>
               </div>
               <textarea
                 ref={jsonRef}
